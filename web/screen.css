@@ -1,0 +1,128 @@
+/**
+ * blue ~1  #0e4962
+ * blue ~2  #3a8fb2
+ * blue ~3  #56a7c9
+ * yellow   #ffed37
+ * 
+ * gray ~1  #2a2a2a
+ * gray ~2  #434343
+ * gray ~3  #7f7f7f
+ * gray ~4  #afafaf
+ * 
+ */
+#content {
+    min-width:900px;
+    width: 60%;
+    margin: auto;
+}
+#background {
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+}
+#background img{
+    width: 120%;
+    height: 120%;
+    }
+section{
+    background: none repeat scroll 0 0 rgba(2, 9, 13, 0.5);
+    margin-bottom: 10%;
+    padding: 6%;
+    }
+* {
+    font-family: Fira Sans,sans;
+    color: #9a9a9a;
+    font-size:16pt;
+    line-height:1.4em;
+    }
+section a{
+    transition: all 0.2s ease 0s;
+    font-weight: 600;
+}
+
+section a:hover {
+    color: #3a8fb2;
+}
+
+#lang {
+    float: right;
+    margin-top: 10px;
+}
+#lang a {
+    background: none repeat scroll 0 0 rgba(255, 255, 255, 0.8);
+    border-radius: 2px;
+    padding: 6px 5px 2px;
+}
+#lang a:hover {
+    background: none repeat scroll 0 0 rgba(255, 255, 255, 1);
+    box-shadow: 0 0 12px 0 #56a7c9;
+}
+
+#hero h1{
+    color: white;
+    font-size: 255px;
+    font-weight: 100;
+    letter-spacing: -0.05em;
+    line-height:1.0em;
+    text-shadow: 2px 2px 7px rgba(0, 20, 20, 1);
+}
+#hero p{
+    color: #3a8fb2;
+    font-size: 24px;
+    font-weight: 300;
+    
+}
+h3{
+    color: #3a8fb2;
+    font-size: 20px;
+    font-weight: 300;
+
+}
+h3 * {
+    color:inherit;
+}
+h2{
+    color: #ffed37;
+    font-size: 48px;
+    font-weight: 300;
+}
+
+.col {
+    float: left;
+    margin-right: 3%;
+    width: 30.3%;
+}
+
+.col > a {
+    color: #7a7a7a;
+    display: block;
+    margin-bottom: 4px;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.link {
+    background: none repeat scroll 0 0 #3a8fb2;
+    border-radius: 2px;
+    color: #e6efef;
+    display: inline-block;
+    font-size: 0.9em;
+    font-weight: 400;
+    margin-left: 10px;
+    padding: 2px 8px;
+    text-decoration: none;
+}
+.link:hover {
+    color:#0e4962;
+}
+.row:before, .row:after {
+    content: " ";
+    display: table;
+    box-sizing: border-box;
+}
+.row:after {
+    clear: both;
+}
