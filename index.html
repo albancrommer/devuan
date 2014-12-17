@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Devuan Logo & Chart proposal</title>
+<link rel="icon" href="web/favicon.png" type="image/x-icon" />
+<link rel="stylesheet" type="text/css" media="all" href="web/reset.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="web/screen.css" />
+<link rel="stylesheet" type="text/css" media="all" href="FiraSans/Fira-master/fira.css" />
+<script type="text/javascript" src="web/jquery.min.js"></script>
+<script>
+
+jQuery.fn.mySize = function() {
+    var doc_height      = $(document).height();
+    var img             = $("#background img");
+    var scroll_top      = $(window).scrollTop();
+    var scroll_ratio    = scroll_top / doc_height ;
+    var img_margin_y    = ( - scroll_ratio * 10 ) +"%";
+    console.log( scroll_top ,"/", doc_height, "=",scroll_ratio,"=>",img_margin_y )
+    img.css("margin-top", img_margin_y);
+};
+
+// Init
+$(function(){
+    setTimeout($(window).mySize, 1)
+})
+
+// Resize
+$(window).resize(function() {
+    $(window).mySize();
+});
+$(window).scroll(function() {
+    $(window).mySize();
+});
+</script>
+</head>
+<body>
+    <div id="background">
+        <img src="web/background-stars.jpg" />
+    </div>
+    <div id="content">
+        <section id="header">
+            <div id="lang"><a href="#"><img src="web/en_flag.png"></a></div>
+            <div id="logo"><a href="#"><img src="web/devuan-white-200px.png"></a></div>
+        </section>
+        <section id="hero">
+            <h1>Jabbah</h1>
+            <p>Devuan Jabbah is the equivalent of Debian Jessie.</p>
+
+        </section>
+        <section id="install">
+            <h2>Installing Devuan Jabbah</h2>
+            <br>
+            <h3>Upgrading from Debian Wheezy?</h3>
+            <p> Replace "debian" by "devuan" in apt source files.&nbsp;<a href="#" class="link">Update guide</a></p>
+            <br>
+            <h3>Testing or Installing from USB?</h3>
+            <p>Download the Live Image and install it on a +4Go USB drive.&nbsp;<a href="#" class="link">Download links</a></p>
+        </section>
+        <section id="misc">
+            <h3><b>Nu Scorpii</b> or <b>Jabbah</b> (ν Sco, 14 Scorpii) is a <a title="Star system" href="https://en.wikipedia.org/wiki/Star_system">star system</a> in the <a title="Constellation" href="https://en.wikipedia.org/wiki/Constellation">constellation</a> <a title="Scorpius" href="https://en.wikipedia.org/wiki/Scorpius">Scorpius</a>.</h3>
+            <br />
+            <p>It is at least a quintuple star, probably a septuple, consisting of two close groups that are separated by 41 arcseconds. The brighter group, <b>Nu Scorpii A</b> and <b>B</b>, is split by 1.3<a class="mw-redirect" title="Arcsecond" href="https://en.wikipedia.org/wiki/Arcsecond">"</a> and composed of <a title="Stellar classification" href="https://en.wikipedia.org/wiki/Stellar_classification">spectral type</a> B2 subgiants. The fainter pair, <b>Nu Scorpii C</b> and <b>D</b>, are spectral type B8 and B9 <a title="Main sequence" href="https://en.wikipedia.org/wiki/Main_sequence">main sequence</a> dwarfs split by 2.4". Nu Scorpii A is itself a semi-detached <a class="mw-redirect" title="Spectroscopic binary" href="https://en.wikipedia.org/wiki/Spectroscopic_binary">spectroscopic binary</a>, having a fainter B-type companion separated by approximately 0.3 <a class="mw-redirect" title="Arcsecond" href="https://en.wikipedia.org/wiki/Arcsecond">mas</a>.</p>
+            <p>Since it is near the <a title="Ecliptic" href="https://en.wikipedia.org/wiki/Ecliptic">ecliptic</a>, Nu Scorpii can be <a title="Occultation" href="https://en.wikipedia.org/wiki/Occultation">occulted</a> by the <a title="Moon" href="https://en.wikipedia.org/wiki/Moon">Moon</a> and, very rarely, by <a title="Planet" href="https://en.wikipedia.org/wiki/Planet">planets</a>. <a title="Mercury (planet)" href="https://en.wikipedia.org/wiki/Mercury_(planet)">Mercury</a> occulted it on 14 December 1821, but will not occult it again until 2 December 2031. The last occultation by <a title="Venus" href="https://en.wikipedia.org/wiki/Venus">Venus</a> took place on 27 December 1852 and the next will take place on 30 December 2095. On 29 July 1808 there was an occultation by <a title="Neptune" href="https://en.wikipedia.org/wiki/Neptune">Neptune</a>.</p>
+            <br />
+            <p>Excerpt from the <a title="Jabbah" href="https://en.wikipedia.org/wiki/Nu_Scorpii">Jabbah</a>'s notice on Wikipedia, the free encyclopedia</p>
+        </section>
+        <section id="footer">
+            <div class="row">
+                <div class="col">
+                    <h3>About us</h3>
+                    <a href="#" >Why Devuan?</a>
+                    <a href="#" >Contributing</a>
+                    <a href="#" >Support</a>
+                </div>
+                <div class="col">
+                    <h3>Follow us</h3>
+                    <a href="#" >Official blog</a>
+                    <a href="#" >Gnu:social</a>
+                    <a href="#" >Twitter</a>
+                </div>
+                <div class="col">
+                    <h3>Contact</h3>
+                    <a href="#" >Mailing list</a>
+                    <a href="#" >Email</a>
+                </div>
+            </div>
+            
+        </section>
+    </div>
+</body>
+</html>
